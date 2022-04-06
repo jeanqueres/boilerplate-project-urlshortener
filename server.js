@@ -19,19 +19,19 @@ app.get('/api/hello', function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 
-app.route('/api/shorturl')
-.get((req, res, next) => {
-  let data = req.query;
-  res.json({'data': data});
-})
+// app.route('/api/shorturl')
+// .get((req, res, next) => {
+//   let data = req.query;
+//   res.json({'data': data});
+// })
 
-// // URL Shortener Microservice POST
-// app.post('/api/shorturl', (req, res, next) => {
-//   res.json({ body: req.body });
-//   //   original_url: req.body,
-//   //   short_url: 
-//   // });
-// });
+// URL Shortener Microservice POST
+app.post('/api/shorturl', (req, res, next) => {
+  res.json(req);
+  //   original_url: req.body,
+  //   short_url: 
+  // });
+});
 
 // URL Shortener Microservice GET
 app.get('/api/shorturl/short_url?', function (req, res) {
