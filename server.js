@@ -33,15 +33,15 @@ app.post('/api/shorturl', (req, res, next) => {
   // });
 });
 
-// URL Shortener Microservice GET
-app.get('/api/shorturl/short_url?', function (req, res) {
-  let url = req.params['short_url'];
+// // URL Shortener Microservice GET
+// app.get('/api/shorturl/short_url?', function (req, res) {
+//   let url = req.params['short_url'];
 
-  if (err)
+//   if (err)
 
-    res.redirect(url);
+//     res.redirect(url);
 
-});
+// });
 
 app.listen(port, function () {
   console.log(`Listening on port ${port}`);
