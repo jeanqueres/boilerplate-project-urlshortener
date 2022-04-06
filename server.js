@@ -26,11 +26,17 @@ app.get('/api/hello', function (req, res) {
 // })
 
 // URL Shortener Microservice POST
-app.post('/api/shorturl', (req, res, next) => {
-  res.json(req);
+app.route('/api/shorturl')
+.get((req, res, next) => {
+  let data = req.query;
+  res.json(data);
   //   original_url: req.body,
   //   short_url: 
   // });
+})
+.post((req, res, next) => {
+  let data = req.body;
+  res.json(data);
 });
 
 // // URL Shortener Microservice GET
